@@ -1,0 +1,142 @@
+body {
+  width: 100%;
+  background: black;
+}
+
+#container {
+  background: black;
+  min-width: 600px;
+  max-width: 1000px;
+  height: 900px;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+
+/*** TEXT ***/
+#text-container {
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+  color: #ffd400;
+  z-index: 3;
+  right: 30px;
+}
+h1 {
+  margin: 0 0 10px 0;
+  font-size: 12em;
+  font-weight: 900;
+  letter-spacing: -8px;
+}
+#theA {
+  margin-bottom: -100px;
+  margin-left: 128px;
+  font-size: 7em;
+  letter-spacing: -5px;
+}
+strong {
+  font-size: 1.5em;
+}
+p {
+  margin-top: 10px;
+  font-weight: 900;
+  max-width: 250px;
+  display: inline-block;
+  font-size: 0.8em;
+}
+#firstP {
+  margin-left: 5px;
+  float: left;
+}
+#secondP {
+  float: right;
+}
+#thirdP {
+  display: none;
+}
+
+/*** DEATHSTAR ***/
+figure {
+  width: 250px;
+  height: 250px;
+  background-color: #808080;
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  border-radius: 50%;
+  animation: ani2 4s infinite;
+  z-index: 2;
+}
+#inside {
+  width: 70px;
+  height: 80px;
+  right: 0px;
+  transform: rotate(-35deg);
+  background-color: #A0A0A0;
+  animation: ani 4s infinite;
+}
+
+/*** STARS ***/
+.star {
+  position: absolute;
+  width: 2px;
+  height: 50px;
+  /* background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #ffffff 100%); */
+  background: white;
+  /* animation: hyperspace 1s linear infinite; */
+}
+
+/****************************
+      KEYFRAMES
+*****************************/
+@media (min-width: 1000px) {
+  #secondP {
+    float: left;
+    margin-left: 95px;
+  }
+  #thirdP {
+    display: inline;
+    float: right;
+  }
+}
+@keyframes hyperspace {
+  0% {
+    top: -100px;
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    top: 550px;
+    opacity: 0;
+  }
+}
+@keyframes ani {
+  0% {
+    right: -5px;
+  }
+  50% {
+    right: 20px;
+    top: 35px;
+    width: 83px;
+    height: 85px;
+    transform: rotate(-15deg);
+  }
+  100% {
+    right: -5px;
+  }
+}
+@keyframes ani2 {
+  0% {
+    right: 10px;
+  }
+  50% {
+    right: 20px;
+    top: 40px;
+  }
+  100% {
+    right: 10px;
+  }
+}

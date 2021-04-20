@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>DESIGN af</title>
+	<link href="Style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body id="bodyn">
+
+  <div id="container">
+		<figure>
+			<figure id="inside"></figure>
+		</figure>
+
+		<div id="text-container">
+			<h1 id="theA">a new</h1>
+			<h1>hope</h1>
+			<p id="firstP">It is a period of civil war.
+			Rebel spaceships, striking
+			from a hidden base, have won
+			their first victory against
+			the evil galactic empire. During the battle, rebel spies
+			</p>
+			<p id="secondP">
+			managed to steal secret
+			plans to the Empire's
+			ultimate weapon, the death star, an armored space
+			station with enough power to
+			destroy an entire planet.
+			</p>
+			<p id="thirdP">
+			Pursued by the Empire's
+			sinister agents, Princess
+			Leia races home aboard her
+			starship, custodian of the
+			stolen plans that can save
+			her people and restore
+			freedom...
+			</p>
+		</div>
+
+  </div>
+
+</body>
+
+<script>
+
+	var x = document.getElementsByClassName('star');
+	function randomPos() {
+		container = document.getElementById('bodyn');
+		newStar = document.createElement('div');
+		container.appendChild(newStar);
+		newStar.className = 'star';
+	}
+	for (var i = 0; i < 150; i++) {
+		randomPos();
+		x[i].style.left = Math.floor(Math.random() * 99) + 1 + '%';
+		x[i].style.top = Math.floor(Math.random() * 750) + 'px';
+		x[i].style.opacity = 0;
+		x[i].style.zIndex = Math.floor(Math.random() * 2) + 1;
+		var speed = Math.floor(Math.random() * (600 - 200) + 200) / 100;
+		x[i].style.animation = 'hyperspace ' + speed + 's linear infinite';
+		x[i].style.animationDelay = Math.floor(Math.random() * (500 - 100) + 100) / 100 + 's';
+	}
+</script>
+
+</html>
